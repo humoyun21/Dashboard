@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="stylesheet" href="./styles/mini.css" />
+    <link
+      rel="icon"
+      href="https://e-jurnal-one.vercel.app/assets/img/logo.png"
+    />
+    <title>Admin-Dashboard</title>
+  </head>
+
+  <body class="bg-slate-50">
+    <header
+      class="fixed top-0 z-30 bg-white py-4 w-full shadow-lg shadow-slate-150"
+    >
+      <nav class="containr-fill flex items-center justify-between">
+        <ul class="flex items-center gap-6">
+          <li>
+            <a href="#" class="flex items-center gap-3 font-medium">
+              <img
+                class="w-[32px] h-[32px]"
+                src="https://e-jurnal-one.vercel.app/assets/img/logo.png"
+                alt="icon"
+              />
+              ADMIN DASHBOAR
+            </a>
+          </li>
+          <li>
+            <button id="navigition-menu" class="text-[24px]">
+              <i class="bi bi-list"></i>
+            </button>
+          </li>
+          <li class="border w-[300px] relative rounded-md">
+            <input
+              class="w-full py-1 px-4 pr-9 rounded-md outline-none focus:shadow-slate-300 focus:shadow-md"
+              type="text"
+              id="search"
+              placeholder="search....."
+            />
+            <i class="bi bi-search absolute right-2 top-1"></i>
+          </li>
+        </ul>
+        <button id="togl-btn" class="flex items-center gap-2 relative">
+          <img
+            class="rounded-full"
+            src="https://picsum.photos/id/36/36/36"
+            alt="icon"
+          />
+          <span>H.Xusanov</span>
+          <ul
+            id="togl-menyu"
+            class="togl-menyu absolute top-[180%] right-[10px] flex flex-col items-start rounded-md bg-white"
+          >
+            <li
+              class="py-3 px-5 hover:bg-slate-100 w-full rounded-t-md duration-200 cursor-pointer"
+            >
+              <a
+                href="#"
+                class="flex items-center gap-3 w-full font-medium duration-200 hover:text-blue-600"
+              >
+                <i class="block bi bi-person-fill"></i>
+                <span class="block">My Profil</span>
+              </a>
+            </li>
+            <li
+              class="py-3 px-5 hover:bg-slate-100 w-full duration-200 cursor-pointer"
+            >
+              <a
+                href="#"
+                class="flex items-center gap-3 w-full font-medium duration-200 hover:text-blue-600"
+              >
+                <i class="block bi bi-gear-fill"></i>
+                <span class="block"> Setting</span>
+              </a>
+            </li>
+            <li
+              id="login-out"
+              class="py-3 px-5 hover:bg-slate-100 w-full duration-200 cursor-pointer"
+              onclick="logiOut()"
+            >
+              <a
+                href="./pages/login.html"
+                class="flex items-center gap-3 w-full font-medium duration-200 hover:text-blue-600"
+              >
+                <i class="block bi bi-box-arrow-right"></i>
+                <span class="block">Sign Out</span>
+              </a>
+            </li>
+            <li
+              class="py-3 px-5 hover:bg-slate-100 w-full rounded-b-md duration-200 cursor-pointer"
+            >
+              <a
+                href="./pages/registration.html"
+                class="flex items-center gap-3 w-full font-medium duration-200 hover:text-blue-600"
+              >
+                <i class="block bi bi-person-fill-check"></i>
+                <span class="block">Registration</span>
+              </a>
+            </li>
+          </ul>
+        </button>
+      </nav>
+    </header>
+    <main class="pt-[67px] flex">
+      <aside
+        id="aside"
+        class="min-w-[350px] absolute md:static min-h-screen shadow-lg shadow-slate-150 bg-white"
+      >
+        <ul class="nav-menu p-3"></ul>
+      </aside>
+    </main>
+  </body>
+  <script src="./assets/js/utils.js"></script>
+  <script src="./assets/js/constants.js"></script>
+  <script src="./assets/js/main.js"></script>
+</html>
